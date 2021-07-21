@@ -1,0 +1,101 @@
+body {
+    width: 500px;
+    height: 100px;
+    background-color: #32a1ce;
+}
+
+.greetings {
+    margin: 50px 20px 50px 20px;
+    color: skyblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;;
+}
+h1#CurrentDateTime {
+    margin: 50px 20px 50px 20px;
+    color: green;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.object {
+    margin: 50px 20px 50px 20px;
+    color: green;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: MoveUpDown 2s linear infinite;
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 40px;
+    }
+}
+
+/* WALKING ANIMATION */
+@keyframes walkanim {
+to { background-position: 100% 0; }
+}
+@keyframes stroll {
+from { transform: translateX(-100%); }
+to { transform: translateX(500%); }
+}
+
+.walk-parent-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    background-color: yellowgreen;
+}
+
+#walk-container {
+display: inline-block;
+position: relative;
+width: 20%;
+padding-bottom: 30%; 
+margin: 0 20% 0 20%; 
+vertical-align: middle; 
+overflow: hidden; 
+animation: stroll 15s linear infinite;
+}
+
+#walk {
+display: inline-block;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/walk-sequence.svg);
+background-repeat: no-repeat;
+background-size: 800%;
+animation: walkanim 1s infinite steps(7);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.btnClick {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 20px 20px 50px 20px;
+position: relative;
+}
+
+
+.text-footer {
+    color: skyblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 10px 10px 10px 10px;
+}
